@@ -45,8 +45,8 @@ class LogTransportManager extends Logger implements IlogTransport {
     public function shouldLog($transportLevel, $configLevel) {
         $transportLevel = $transportLevel ?: $configLevel ?: $this->config['level'];
 
-        $targetLevel = LogLevelNumberEnum::fromString($transportLevel)->value;
-        $desiredLevel = LogLevelNumberEnum::fromString($configLevel ?: $this->config['level'])->value;
+        $targetLevel = LogLevelNumberEnum::fromString($transportLevel);
+        $desiredLevel = LogLevelNumberEnum::fromString($configLevel ?: $this->config['level']);
 
         return $targetLevel >= $desiredLevel;
     }
