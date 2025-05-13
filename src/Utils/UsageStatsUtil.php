@@ -43,7 +43,7 @@ class UsageStatsUtil
      *
      * @return UsageStatsUtil The single instance of UsageStatsUtil
      */
-    public static function getInstance(): UsageStatsUtil
+    public static function getInstance()
     {
         if (!isset(self::$instance)) {
             self::$instance = new self();
@@ -57,7 +57,7 @@ class UsageStatsUtil
      *
      * @param array $options Configuration options for the SDK
      */
-    public function setUsageStats(array $options): void
+    public function setUsageStats(array $options)
     {
         $storage = $options['storage'] ?? null;
         $logger = $options['logger'] ?? null;
@@ -108,7 +108,7 @@ class UsageStatsUtil
      *
      * @return array Record containing boolean flags for various SDK features in use
      */
-    public function getUsageStats(): array
+    public function getUsageStats()
     {
         return $this->usageStatsData;
     }
