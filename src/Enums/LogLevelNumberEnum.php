@@ -18,15 +18,16 @@
 
 namespace vwo\Enums;
 
-enum LogLevelNumberEnum {
-    case TRACE = 0;
-    case DEBUG = 1;
-    case INFO = 2;
-    case WARN = 3;
-    case ERROR = 4;
+class LogLevelNumberEnum
+{
+    public const TRACE = 0;
+    public const DEBUG = 1;
+    public const INFO = 2;
+    public const WARN = 3;
+    public const ERROR = 4;
 
-    // You can add helper methods if needed, for example
-    public static function fromString(string $level): ?self {
+    public static function fromString(string $level): ?int
+    {
         return match (strtoupper($level)) {
             'TRACE' => self::TRACE,
             'DEBUG' => self::DEBUG,
