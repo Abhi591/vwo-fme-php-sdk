@@ -18,7 +18,7 @@
 
 namespace vwo\Enums;
 
-enum LogLevelNumberEnum: int {
+enum LogLevelNumberEnum {
     case TRACE = 0;
     case DEBUG = 1;
     case INFO = 2;
