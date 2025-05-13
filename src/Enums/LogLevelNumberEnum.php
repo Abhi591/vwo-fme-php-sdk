@@ -25,7 +25,7 @@ enum LogLevelNumberEnum {
     case WARN = 3;
     case ERROR = 4;
 
-    // You can add helper methods if needed, for example:
+    // You can add helper methods if needed, for example
     public static function fromString(string $level): ?self {
         return match (strtoupper($level)) {
             'TRACE' => self::TRACE,
