@@ -26,15 +26,22 @@ class LogLevelNumberEnum
     public const WARN = 3;
     public const ERROR = 4;
 
-    public static function fromString(string $level): ?int
+    public static function fromString(string $level)
     {
-        return match (strtoupper($level)) {
-            'TRACE' => self::TRACE,
-            'DEBUG' => self::DEBUG,
-            'INFO' => self::INFO,
-            'WARN' => self::WARN,
-            'ERROR' => self::ERROR,
-            default => null,
-        };
+        $level = strtoupper($level);
+        switch ($level) {
+            case 'TRACE':
+                return self::TRACE;
+            case 'DEBUG':
+                return self::DEBUG;
+            case 'INFO':
+                return self::INFO;
+            case 'WARN':
+                return self::WARN;
+            case 'ERROR':
+                return self::ERROR;
+            default:
+                return null;
+        }
     }
 }
