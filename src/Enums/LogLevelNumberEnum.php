@@ -20,11 +20,11 @@ namespace vwo\Enums;
 
 class LogLevelNumberEnum
 {
-    public const TRACE = 0;
-    public const DEBUG = 1;
-    public const INFO = 2;
-    public const WARN = 3;
-    public const ERROR = 4;
+    const TRACE = 0;
+    const DEBUG = 1;
+    const INFO = 2;
+    const WARN = 3;
+    const ERROR = 4;
 
     public static function fromString(string $level)
     {
