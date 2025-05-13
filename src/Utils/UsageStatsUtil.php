@@ -85,7 +85,7 @@ class UsageStatsUtil
         }
 
         if (isset($logger['level'])) {
-            $data['ll'] = LogLevelNumberEnum::fromString($logger['level'])->value ?? -1;
+            $data['ll'] = LogLevelNumberEnum::fromString($logger['level']) ?? -1;
         }
 
         if ($pollInterval) {
